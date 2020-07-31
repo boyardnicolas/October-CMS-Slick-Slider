@@ -1,52 +1,52 @@
-{% if not(slider.slides.slideShows is same as ('no_slider')) %}
+{% if not(__SELF__.slides.slideShows is same as ('no_slider')) %}
 {% put scripts %}
     <script>
 		$(document).ready(function(){
 			var args = {
-				accessibility: {{numberToBoolean(slider.slides.slideShows.accessibility)}},
-				autoplay: {{numberToBoolean(slider.slides.slideShows.autoplay)}},
-				autoplaySpeed: {{ slider.slides.slideShows.autoplay_speed ?: 3000 }},
-				arrows: {{numberToBoolean(slider.slides.slideShows.arrows)}},
-				prevArrow: '{{ slider.slides.slideShows.prev_arrow ? slider.slides.slideShows.prev_arrow|raw : '<button type="button" class="slick-prev">Previous</button>' }}',
-				nextArrow: '{{ slider.slides.slideShows.next_arrow ? slider.slides.slideShows.next_arrow|raw : '<button type="button" class="slick-next">Next</button>' }}',
-				centerMode: {{numberToBoolean(slider.slides.slideShows.center_mode)}},
-				centerPadding: '{{slider.slides.slideShows.center_padding ?: '50px' }}',
-				cssEase: '{{slider.slides.slideShows.css_ease ?: 'ease'}}',
-				dots: {{numberToBoolean(slider.slides.slideShows.dots)}},
-				draggable: {{numberToBoolean(slider.slides.slideShows.draggable)}},
-				fade: {{numberToBoolean(slider.slides.slideShows.fade)}},
-				focusOnSelect: {{numberToBoolean(slider.slides.slideShows.focus_on_select)}},
-				easing: '{{slider.slides.slideShows.easing ?: 'linear'}}',
-				edgeFriction: {{slider.slides.slideShows.edge_friction ?: 0.15}},
-				infinite: {{numberToBoolean(slider.slides.slideShows.infinite)}},
-				initialSlide: {{slider.slides.slideShows.initial_slide ?: 0}},
-				lazyLoad: '{{slider.slides.slideShows.lazy_load ?: 'ondemand'}}',
-				mobileFirst: {{numberToBoolean(slider.slides.slideShows.mobile_first)}},
-				pauseOnFocus: {{numberToBoolean(slider.slides.slideShows.pause_on_focus)}},
-				pauseOnHover: {{numberToBoolean(slider.slides.slideShows.pause_on_hover)}},
-				pauseOnDotsHover: {{numberToBoolean(slider.slides.slideShows.pause_on_dots_hover)}},
-				rows: {{slider.slides.slideShows.rows ?: 1}},
-				slidesPerRow: {{slider.slides.slideShows.slides_per_row ?: 1}},
-				slidesToShow: {{slider.slides.slideShows.slides_to_show ?: 1}},
-				slidesToScroll: {{slider.slides.slideShows.slides_to_scroll ?: 1}},
-				speed: {{slider.slides.slideShows.speed ?: 300}},
-				swipe: {{numberToBoolean(slider.slides.slideShows.swipe)}},
-				touchMove: {{numberToBoolean(slider.slides.slideShows.touch_move)}},
-				touchThreshold: {{slider.slides.slideShows.touch_threshold ?: 5}},
-				useCSS: {{numberToBoolean(slider.slides.slideShows.use_css)}},
-				useTransform: {{numberToBoolean(slider.slides.slideShows.use_transform)}},
-				vertical: {{numberToBoolean(slider.slides.slideShows.vertical)}},
-				verticalSwiping: {{numberToBoolean(slider.slides.slideShows.vertical_swiping)}},
-				rtl: {{numberToBoolean(slider.slides.slideShows.rtl)}},
-				waitForAnimate: {{numberToBoolean(slider.slides.slideShows.wait_for_animate)}},
-				zIndex: {{slider.slides.slideShows.z_index ?: 1000}},
-				responsive: {{slider.slides.breakpointJson|raw}}
+				accessibility: {{numberToBoolean(__SELF__.slides.slideShows.accessibility)}},
+				autoplay: {{numberToBoolean(__SELF__.slides.slideShows.autoplay)}},
+				autoplaySpeed: {{ __SELF__.slides.slideShows.autoplay_speed ?: 3000 }},
+				arrows: {{numberToBoolean(__SELF__.slides.slideShows.arrows)}},
+				prevArrow: '{{ __SELF__.slides.slideShows.prev_arrow ? __SELF__.slides.slideShows.prev_arrow|raw : '<button type="button" class="slick-prev">Previous</button>' }}',
+				nextArrow: '{{ __SELF__.slides.slideShows.next_arrow ? __SELF__.slides.slideShows.next_arrow|raw : '<button type="button" class="slick-next">Next</button>' }}',
+				centerMode: {{numberToBoolean(__SELF__.slides.slideShows.center_mode)}},
+				centerPadding: '{{__SELF__.slides.slideShows.center_padding ?: '50px' }}',
+				cssEase: '{{__SELF__.slides.slideShows.css_ease ?: 'ease'}}',
+				dots: {{numberToBoolean(__SELF__.slides.slideShows.dots)}},
+				draggable: {{numberToBoolean(__SELF__.slides.slideShows.draggable)}},
+				fade: {{numberToBoolean(__SELF__.slides.slideShows.fade)}},
+				focusOnSelect: {{numberToBoolean(__SELF__.slides.slideShows.focus_on_select)}},
+				easing: '{{__SELF__.slides.slideShows.easing ?: 'linear'}}',
+				edgeFriction: {{__SELF__.slides.slideShows.edge_friction ?: 0.15}},
+				infinite: {{numberToBoolean(__SELF__.slides.slideShows.infinite)}},
+				initialSlide: {{__SELF__.slides.slideShows.initial_slide ?: 0}},
+				lazyLoad: '{{__SELF__.slides.slideShows.lazy_load ?: 'ondemand'}}',
+				mobileFirst: {{numberToBoolean(__SELF__.slides.slideShows.mobile_first)}},
+				pauseOnFocus: {{numberToBoolean(__SELF__.slides.slideShows.pause_on_focus)}},
+				pauseOnHover: {{numberToBoolean(__SELF__.slides.slideShows.pause_on_hover)}},
+				pauseOnDotsHover: {{numberToBoolean(__SELF__.slides.slideShows.pause_on_dots_hover)}},
+				rows: {{__SELF__.slides.slideShows.rows ?: 1}},
+				slidesPerRow: {{__SELF__.slides.slideShows.slides_per_row ?: 1}},
+				slidesToShow: {{__SELF__.slides.slideShows.slides_to_show ?: 1}},
+				slidesToScroll: {{__SELF__.slides.slideShows.slides_to_scroll ?: 1}},
+				speed: {{__SELF__.slides.slideShows.speed ?: 300}},
+				swipe: {{numberToBoolean(__SELF__.slides.slideShows.swipe)}},
+				touchMove: {{numberToBoolean(__SELF__.slides.slideShows.touch_move)}},
+				touchThreshold: {{__SELF__.slides.slideShows.touch_threshold ?: 5}},
+				useCSS: {{numberToBoolean(__SELF__.slides.slideShows.use_css)}},
+				useTransform: {{numberToBoolean(__SELF__.slides.slideShows.use_transform)}},
+				vertical: {{numberToBoolean(__SELF__.slides.slideShows.vertical)}},
+				verticalSwiping: {{numberToBoolean(__SELF__.slides.slideShows.vertical_swiping)}},
+				rtl: {{numberToBoolean(__SELF__.slides.slideShows.rtl)}},
+				waitForAnimate: {{numberToBoolean(__SELF__.slides.slideShows.wait_for_animate)}},
+				zIndex: {{__SELF__.slides.slideShows.z_index ?: 1000}},
+				responsive: {{__SELF__.slides.breakpointJson|raw}}
 			};
-			$('.slick-slider-{{slider.slides.slideShows.id}}').slick(args);
+			$('.slick-slider-{{__SELF__.slides.slideShows.id}}').not('.slick-initialized').slick(args);
 
 			// $(window).resize(function() {
-			// 	$('.slick-slider-{{slider.slides.slideShows.id}}').slick('unslick');
-			// 	$('.slick-slider-{{slider.slides.slideShows.id}}').slick(args);
+			// 	$('.slick-slider-{{__SELF__.slides.slideShows.id}}').slick('unslick');
+			// 	$('.slick-slider-{{__SELF__.slides.slideShows.id}}').slick(args);
 			// });
 		});
 
@@ -54,14 +54,14 @@
 {% endput %}
 {% put styles %}
     <style>
-    	.slick-slider-{{slider.slides.slideShows.id}} .slick-slide > div > div {
+    	.slick-slider-{{__SELF__.slides.slideShows.id}} .slick-slide > div > div {
     		float: left!important;
     	}
-    	.slick-slider-{{slider.slides.slideShows.id}} .slick-slide > div > a {
+    	.slick-slider-{{__SELF__.slides.slideShows.id}} .slick-slide > div > a {
     		float: left!important;
     	}
-    	.slick-slider-{{slider.slides.slideShows.id}} .slick-slide .slide-image {
-    		min-height: {{slider.slides.slideShows.slide_show_height ?: '500px'}};
+    	.slick-slider-{{__SELF__.slides.slideShows.id}} .slick-slide .slide-image {
+    		min-height: {{__SELF__.slides.slideShows.slide_show_height ?: '500px'}};
     		position: relative;
     		background-size: cover;
 		    display: -webkit-box;
@@ -74,14 +74,14 @@
 	        -ms-flex-align: center;
             align-items: center;
     	}
-    	.slick-slider-{{slider.slides.slideShows.id}} .slick-slide .slide-image .slide-content {
+    	.slick-slider-{{__SELF__.slides.slideShows.id}} .slick-slide .slide-image .slide-content {
     		color: #ffffff;
     		text-align: center;
     	}
-    	{% for breakpoint in slider.slides.slideShows.responsive %}
+    	{% for breakpoint in __SELF__.slides.slideShows.responsive %}
 
     		@media (max-width: {{breakpoint.breakpoint}}px) {
-		    	.slick-slider-{{slider.slides.slideShows.id}} .slick-slide .slide-image {
+		    	.slick-slider-{{__SELF__.slides.slideShows.id}} .slick-slide .slide-image {
 		    		min-height: {{breakpoint.responsive_slide_show_height ?: '500px'}};
 		    	}
     		}
@@ -89,8 +89,8 @@
     	{% endfor %}
     </style>
 {% endput %}
-<div class="slick-slider-{{slider.slides.slideShows.id}}">
-	{% for slide in slider.slides.slideShows.slide_show_content %}
+<div class="slick-slider-{{__SELF__.slides.slideShows.id}}">
+	{% for slide in __SELF__.slides.slideShows.slide_show_content %}
 		{% if slide.slide_link != '' %}
 			<a href="{{slide.slide_link}}" class="slide">
 		        <div class="slide-image" style="background-image: url( '{{slide.slide_image|media}}' ); background-position: {{slide.image_horizontal_position}}% {{slide.image_position}}%;">
@@ -117,3 +117,4 @@
     {% endfor %}
 </div>
 {% endif %}
+
