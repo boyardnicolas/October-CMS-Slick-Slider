@@ -91,30 +91,30 @@
 {% endput %}
 <div class="slick-slider-{{__SELF__.slides.slideShows.id}}">
 	{% for slide in __SELF__.slides.slideShows.slide_show_content %}
-		{% if slide.slide_link != '' %}
+		{% if slide.slide_link != '' and not slide.slide_button %}
 			<a href="{{slide.slide_link}}" class="slide">
-		        <div class="slide-image" style="background-image: url( '{{slide.slide_image|media}}' ); background-position: {{slide.image_horizontal_position}}% {{slide.image_position}}%;">
-		        	{% if (slide.slide_title or slide.slide_description) %}
-	        		<div class="slide-content">
-	        			<h1>{{slide.slide_title}}</h1>
-	        			<p>{{slide.slide_description}}</p>
-	    			</div>
-		        	{% endif %}
-		        </div>
-	        </a>
-        {% else %}
-        	<div class="slide">
-		        <div class="slide-image" style="background-image: url( '{{slide.slide_image|media}}' ); background-position: {{slide.image_horizontal_position}}% {{slide.image_position}}%;">
-		        	{% if (slide.slide_title or slide.slide_description) %}
-	        		<div class="slide-content">
-	        			<h1>{{slide.slide_title}}</h1>
-	        			<p>{{slide.slide_description}}</p>
-	    			</div>
-		        	{% endif %}
-		        </div>
-	        </div>
-        {% endif %}
+		{% else %}
+			<div class="slide">
+		{% endif %}
+			<div class="slide-image"
+				 style="
+						 background-image: url( '{{slide.slide_image|media}}' );
+						 background-position: {{slide.image_horizontal_position}}% {{slide.image_position}}%;
+						 justify-content: {{ slide.content_horizontal_position ?: 'center' }};
+						 align-items: {{ slide.content_vertical_position ?: 'center' }};
+						 padding: 2vh calc(5vw + 100px);
+						 ">
+				{% if (slide.slide_title or slide.slide_description) %}
+				<div class="slide-content" style="text-align: {{ slide.text_align ?: 'center' }};">
+					<h1>{{slide.slide_title}}</h1>
+					<p>{{slide.slide_description}}</p>
+					{% if slide.slide_link != '' and slide.slide_button %}
+						<a href="{{slide.slide_link}}"><div class="btn btn-default slick-slider-btn">{{ slide.slide_button }}</div></a>
+					{% endif %}
+				</div>
+				{% endif %}
+			</div>
+		{% if slide.slide_button %}</a>{% else %}</div>{% endif %}
     {% endfor %}
 </div>
 {% endif %}
-

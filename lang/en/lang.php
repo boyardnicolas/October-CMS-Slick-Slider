@@ -111,5 +111,9 @@
         'manage_slides' => 'User can only manage the slides, not the settings',
         'create_slide_shows' => 'Create Slide Shows',
         'create_slide_shows_label' => 'User can create and delete slideshows',
+        'content_vertical_position' => 'Content Vertical Position',
+        'content_horizontal_position' => 'Content Horizontal Position',
+        'slide_button' => 'Button',
+        'text_align' => 'Text align',
     ],
 ];

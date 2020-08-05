@@ -32,6 +32,20 @@ tabs:
                         size: large
                         span: right
                         type: textarea
+                    slide_button:
+                        label: 'peterhegman.slickslider::lang.slickslider.slide_button'
+                        span: right
+                        type: text
+                    text_align:
+                        label: 'peterhegman.slickslider::lang.slickslider.text_align'
+                        span: storm
+                        options:
+                            left: 'Left'
+                            center: 'Center'
+                            right: 'Right'
+                            justify: 'Justify'
+                        type: radio
+                        default: left
                     image_position:
                         label: 'peterhegman.slickslider::lang.slickslider.image_position'
                         options:
@@ -40,8 +54,9 @@ tabs:
                             50: 'Show Middle'
                             75: 'Show Bottom Middle'
                             100: 'Show Bottom'
-                        span: right
+                        span: left
                         type: radio
+                        default: 50
                     image_horizontal_position:
                         label: 'peterhegman.slickslider::lang.slickslider.image_horizontal_position'
                         span: right
@@ -52,6 +67,25 @@ tabs:
                             75: 'Show Right Middle'
                             100: 'Show Right'
                         type: radio
+                        default: 50
+                    content_vertical_position:
+                        label: 'peterhegman.slickslider::lang.slickslider.content_vertical_position'
+                        options:
+                            flex-start: 'On Top'
+                            center: 'On Middle'
+                            flex-end: 'On Bottom'
+                        span: left
+                        type: radio
+                        default: center
+                    content_horizontal_position:
+                        label: 'peterhegman.slickslider::lang.slickslider.content_horizontal_position'
+                        span: right
+                        options:
+                            flex-start: 'On Left'
+                            center: 'On Center'
+                            flex-end: 'On Right'
+                        type: radio
+                        default: center
         settings1:
             label: 'peterhegman.slickslider::lang.slickslider.toggle_options'
             span: full
