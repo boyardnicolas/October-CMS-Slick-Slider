@@ -96,17 +96,15 @@
 		{% else %}
 			<div class="slide">
 		{% endif %}
-			<div class="slide-image"
+			<div class="slide-image content-x-{{ slide.content_horizontal_position }} content-y-{{ slide.content_vertical_position }}"
 				 style="
 						 background-image: url( '{{slide.slide_image|media}}' );
 						 background-position: {{slide.image_horizontal_position}}% {{slide.image_position}}%;
-						 justify-content: {{ slide.content_horizontal_position ?: 'center' }};
-						 align-items: {{ slide.content_vertical_position ?: 'center' }};
 						 ">
 				{% if (slide.slide_title or slide.slide_description) %}
 				<div class="slide-content" style="text-align: {{ slide.text_align ?: 'center' }}; {% if slide.content_vertical_position == "flex-start" %}margin-top: 11.5em;{% endif %}">
-					<h1>{{slide.slide_title}}</h1>
-					<span>{{slide.slide_description}}</span>
+					<h1 class="title">{{slide.slide_title}}</h1>
+					<span class="description">{{slide.slide_description}}</span>
 					{% if slide.slide_link != '' and slide.slide_button %}
 						<a href="{{slide.slide_link}}"><div class="btn btn-default slick-slider-btn">{{ slide.slide_button }}</div></a>
 					{% endif %}
