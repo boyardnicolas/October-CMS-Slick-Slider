@@ -38,7 +38,7 @@ tabs:
                         type: text
                     text_align:
                         label: 'peterhegman.slickslider::lang.slickslider.text_align'
-                        span: storm
+                        span: storm span-left
                         options:
                             left: 'Left'
                             center: 'Center'
@@ -94,7 +94,7 @@ tabs:
         autoplay:
             label: 'peterhegman.slickslider::lang.slickslider.autoplay'
             span: auto
-            default: 0
+            default: 1
             type: switch
             comment: 'peterhegman.slickslider::lang.slickslider.autoplay_desc'
             tab: 'peterhegman.slickslider::lang.slickslider.settings'
@@ -108,7 +108,7 @@ tabs:
         arrows:
             label: 'peterhegman.slickslider::lang.slickslider.arrows'
             span: auto
-            default: 1
+            default: 0
             type: switch
             tab: 'peterhegman.slickslider::lang.slickslider.settings'
         adaptive_height:
@@ -129,6 +129,7 @@ tabs:
             type: switch
             comment: 'peterhegman.slickslider::lang.slickslider.dots_desc'
             tab: 'peterhegman.slickslider::lang.slickslider.settings'
+            default: 1
         draggable:
             label: 'peterhegman.slickslider::lang.slickslider.draggable'
             span: auto
@@ -223,7 +224,7 @@ tabs:
             comment: 'peterhegman.slickslider::lang.slickslider.rtl_desc'
             tab: 'peterhegman.slickslider::lang.slickslider.settings'
         wait_for_animate:
-            label: 'peterhegman.slickslider::lang.slickslider.wait_for_animage'
+            label: 'peterhegman.slickslider::lang.slickslider.wait_for_animate'
             span: auto
             default: 1
             type: switch
@@ -232,7 +233,7 @@ tabs:
         include_jquery:
             label: 'peterhegman.slickslider::lang.slickslider.include_jquery'
             span: auto
-            default: 1
+            default: 0
             type: switch
             comment: 'peterhegman.slickslider::lang.slickslider.include_jquery_desc'
             tab: 'peterhegman.slickslider::lang.slickslider.settings'

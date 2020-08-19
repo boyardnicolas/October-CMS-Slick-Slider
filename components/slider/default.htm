@@ -102,19 +102,18 @@
 						 background-position: {{slide.image_horizontal_position}}% {{slide.image_position}}%;
 						 justify-content: {{ slide.content_horizontal_position ?: 'center' }};
 						 align-items: {{ slide.content_vertical_position ?: 'center' }};
-						 padding: 2vh calc(5vw + 100px);
 						 ">
 				{% if (slide.slide_title or slide.slide_description) %}
-				<div class="slide-content" style="text-align: {{ slide.text_align ?: 'center' }};">
+				<div class="slide-content" style="text-align: {{ slide.text_align ?: 'center' }}; {% if slide.content_vertical_position == "flex-start" %}margin-top: 11.5em;{% endif %}">
 					<h1>{{slide.slide_title}}</h1>
-					<p>{{slide.slide_description}}</p>
+					<span>{{slide.slide_description}}</span>
 					{% if slide.slide_link != '' and slide.slide_button %}
 						<a href="{{slide.slide_link}}"><div class="btn btn-default slick-slider-btn">{{ slide.slide_button }}</div></a>
 					{% endif %}
 				</div>
 				{% endif %}
 			</div>
-		{% if slide.slide_button %}</a>{% else %}</div>{% endif %}
+		{% if slide.slide_link != '' and not slide.slide_button %}</a>{% else %}</div>{% endif %}
     {% endfor %}
 </div>
 {% endif %}
